@@ -1,0 +1,46 @@
+LOD(Level of Detail)
+table scope Fixed LOD
+Drag sub category and sales(avg) onto canvas
+then create a calculated field using fixed LOD (Fixed:Avg(sales))
+then drag fixed LOD onto detail and create a reference line using fixed LOD
+Drag category onto canvas and select pane wise refrence line to see the dfifference
+fixed LOD will not get influenced by any other measures or dimensions 
+
+Dimension LOD 
+i want to look at region level of detail, no matter what dimensions i bring , i want to look only at region level of sales data
+make a calculated field on region , therefore any other dimensions will, not impact region
+drag region onto canvas followed by state
+then create calculated field on fixed region sum of sales 
+then drag Dimesnion LOD onto canvas to see the difference
+Dimesnion LOD cannot impact our calculations
+{ FIXED [Region]: SUM([Sales])}
+
+Include LOD
+It will influence the canvas
+chart will be at higher level of detail and calculation will be at granular level compared to level of detail on chart
+let us say chart has 2 dimensions , using Include LOD we are inlcuding another dimension, therfore calculation will be at 3 rd level of detail on chart
+EXample
+get me the avg sales across different states( row shelf) and sub categories(column shelf)
+next , i dont want state to be there and also i wnat the average of average sales
+i want to obtain average of average sales without having state on row shelf, i want only subcategory and not state but i want at state level of detail
+
+Exclude LOD
+opposite of include LOD
+you can exclude any dimensions that you dont want 
+
+Waterfall chart
+waterfall chart- whether dimesnion will positively contribute towards a given measure  or not (is it taking the profit up or down)
+it will give us information on contribution
+1)drag profit on row shelf and sub category on column shelf
+3)create a negative profit field, add this field onto size shelf and bring profit onto color shelf
+4) go to analysis and add show row totals
+5) Use profit on canavas(row shelf) and then create a calculated filed on running total
+6)Go to marks field and convert chart type to gantt chart
+7)always calculate your waterfall chart on running total
+
+
+
+
+
+
+

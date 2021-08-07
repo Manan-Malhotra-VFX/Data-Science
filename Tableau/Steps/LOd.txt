@@ -1,0 +1,68 @@
+Fixed LOD
+
+1. Sales --- Text
+2. Category -- Rows
+
+Doble click on Fixed LOD
+
+Drag Category onto Filters , show filter , check options
+
+{ Fixed : Sum(Sales) }
+
+
+Second Fixed LOD
+
+1.Subcategory --- Column
+2. Sales --- Rows ---- AVG(Sales)
+
+Calculated field :  { Fixed : AVG(Sales) }
+bring this LOd on to detail
+
+Then Create reference line using this fixed lod
+Calculted field Fixed LOD will not change compare with other reference lines
+
+Dimension LOD
+
+1. Region,State ---- Rows
+
+Calculate field : { Fixed Region : Sum(Sales) }
+Drag this LOD onto canvas .. ABC
+Sales onto Canvas
+
+
+
+Include LOD
+
+1. Subcategory --- Column
+2. State   ----   Row
+3. Sales -- Text  --- Avg 
+  Totals --- Column Grand Total
+Total --- Total using average
+
+ Take another sheet.
+Sales -- Row -- avg
+Subcategory -- Column
+ { Include [State] : Avg(Sales) }
+Drop this LOd onto Rows -- avg
+
+
+Exclude LOD
+
+1. Region , Category  --- Rows
+2. Sales            ---- Column
+
+I dont want to see region level data 
+i want to see LOD w.r.t Country with same visualization
+
+{ Exclude [Region] : Sum(Sales) }
+Bring this LOD to Column
+Change Color and add Text
+
+
+
+
+---- Context Filter
+----- Joins
+---- Story
+----- Data Blending
+

@@ -1,0 +1,119 @@
+Integration with R (it started in version 8.1)
+this feature not available on tableau public
+it happens through calculated fields
+we have to see if there is any package in R, only packages which can be called through calculated fields can be used in Tableau
+R should be ready to accept connection with Tableau , this is also important for us
+1)install package called Rserve
+2)invoke that package Rserve
+3) start Rserve (Rserve())
+bydefault rserve will run on 6311 port)
+there 4 scripts in tableau that you can use to communicate with R (SCRIPT_BOOL, SCRIPT_INT, SCRIPT_REAL and SCRIPT_STR)
+Calculated Field(Expected Profit)
+SCRIPT_REAL("
+fit <- lm(.arg1 ~ .arg2 + .arg3)
+fit$fitted
+"
+,
+SUM ([Profit]),AVG([Quantity]),AVG([Discount])
+)
+
+Start R
+1)How to install R
+2) there is a package in R called R serve- this package will help r to communicate with external services
+there are different packages in r , we have to call that package and perform some anaylsis on the data which is present in tableau
+3)open tableau and connect to r serve from within tableau
+4)connect to datasource(sample superstore) in tableau and build our visualisations
+5) we will use calculated fields(expected profit) to communicate with r
+
+functions which start script you can use in your calculated fields
+
+Donut charts
+it is a combination of pie chart and circle plot, create a pie and on top of it put a circle
+we need dual axis( 2 entries on row or column)
+create one calculated field (constant for example)(constant here is with value 0)
+put 2 constant onthe canvas shelf
+go to marks card of first constant shelf( bring region to color shelf and look at profit)
+bring profit onto size shelf
+go to marks card and change the chart type to pie
+go to second marks card and change the chart type to circle, also change the color to white
+then simply goto row shelf and select constant pill and say dual axis 
+if you want to magnify the image ctrl+shift+B
+
+Animation charts- use world indicators database
+put life expectancy male on rows
+put helath exp/capita on columns 
+darg region onto color shelf and put year in pages
+it will give u slider , you can slide up and down your data or use animation or play controls
+
+funnel chart (top is known as head and bototm is known as neck part)
+connect to sample super store
+bring sales on to rows field
+bring segment into colors part
+use sales onto size shelf
+
+advance funnel chart
+connect to sample superstore
+based on ship mode and sum of sales
+drop ship mode onto columns and drop sales onto rows
+you have to take the transpose of the bar chart and then you have to convert the chart type into area chart and sort it by descending order
+in case if you want to complete your other half , you have to create a calculated field with negative sales adn then drop it before sales on column shelf
+to add information , you can simply drag sales onto your label shelf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

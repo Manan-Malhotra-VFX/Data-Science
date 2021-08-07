@@ -1,0 +1,46 @@
+ #### Conditional formatting
+Sales Vs OrderDate
+
+if SUM([Sales])>100000 THEN "Goodsales"
+ELSEIF SUM([Sales])<50000 THEN "Badsales"
+ELSE  "Averagesales"
+END
+
+##### Case Statement
+
+Coffee chain dataset
+
+CASE ([Product Type])
+    WHEN "Coffee" THEN "Coffee"
+    WHEN "Espresso" THEN "Coffee"
+    WHEN "Herbal Tea" THEN "Tea"
+else "Tea"
+END
+
+### Grouping based on condition
+
+if SUM([Profit])<0 THEN "Losses"
+ELSEIF SUM([Profit])>0 AND SUM([Profit])<10000 THEN "Avgprofit"
+ELSE "Highprofits"
+END
+
+
+
+#### Worldmap
+Globalsuperstore
+Parameter with maps
+1. Create one parameter on sales like emergingthreshold
+2. Create one more parameter on sales like threshold
+
+IF (ATTR([Market]) = "Africa" AND SUM([Sales]) > [Emerging Threshold]) THEN "Well Performing"
+ELSEIF (ATTR([Market]) = "LATAM" AND SUM([Sales]) > [Emerging Threshold]) THEN "Well Performing"
+ELSEIF (ATTR([Market]) = "US" AND SUM([Sales]) > [Threshold]) THEN "Well Performing"
+ELSEIF (ATTR([Market]) = "EU" AND SUM([Sales]) > [Threshold]) THEN "Well Performing"
+ELSEIF (ATTR([Market]) = "APAC" AND SUM([Sales]) > [Threshold]) THEN "Well Performing"
+ELSEIF (ATTR([Market]) = "EMEA" AND SUM([Sales]) > [Threshold]) THEN "Well Performing"
+ELSEIF (ATTR([Market]) = "CANADA" AND SUM([Sales]) > [Threshold]) THEN "Well Performing"
+ELSE "Under Performing"
+END
+
+
+

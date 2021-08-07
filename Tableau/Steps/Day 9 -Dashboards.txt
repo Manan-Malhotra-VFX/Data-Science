@@ -1,0 +1,84 @@
+Dashboards-put worksheets together and make it interactive
+worksheets are nothing but our building blocks
+next to yourk work sheet icon , you will find your dasboard icon , same thing can be also accesses from dashboard icon 
+whwn you click on dashboard icon , new dashboard will be created ,on left hand side you can find device preview , below which all the worksheets that you have created and also objects
+
+Goto shipping dashboard click on hide and unhide sheets, we have running total of shipping costs , shipping cost
+Understand different sheets , what is there in every row and shelf , what is the chart trying to convey
+Then simply darg and drop every work sheet onto dashboard (you will notice by default it is tiled) let drop it below map , then bring running total shipping costs
+
+1) Always a follow a zig zag patterns when arranging worksheets in dashboards
+2) Dont use too many worksheets on your dashboards, beacuse information could be confusing (maximum 4)
+3) Once a worksheet is placed in dashboard , you can look at size options on the left hand side, whichever worksheet you are including in the dashboard , you can identify it with blue icon and all the controls cab be seen on the chart
+you can change the fixed size to laptop browser to see the changes(you can use fixed size if you can know beforehand what device he is using)
+If we dont know the end device, we can select automatic so tableau will automatically adjust (our focus at the end of the day is to get rid of scroll bars)
+Another sizing option what we have is range , but it is hardly used
+
+you have 3 types of sizing options
+1)fixed(when you know the end device)
+2)automatic(when you dont know the end device)
+3)range(range is rarely used)
+
+Device preview- if you know the device before hand , you can simply select the device in which you want to view your dashboard
+device preview has few options such as desktop, tablet, phone
+
+Nxt concept: Objects
+Image: whenever we want to add the logo of the company
+if you want image object use floating instead of tiled, when i select floating , all my images will be floating around in my worksheet
+with floating you can go to layout and change x and y dimensions to increase or decrease the size of the image
+let su say , i want to publish a web page or a blank object
+we can also do a floating blank object(becasue it is floating , you can adjust the width etc)
+only way to add a line between charts is use floating blank object in dashboard 
+containers-vertical and horizontal 
+this is how we build a dashboard in tableau
+
+Filters- one way of making interactive dashboards
+If you had already applied a filter on the underlying worksheet it will appear
+we can create filter based on single work sheet or can make it global , right click and selct apply to all work sheets to make it global
+you can also apply to selected work sheets , if you see a barrel icon , filter is being apllied to all the worksheets
+even the title of the woksheet can be made dynamic
+also, you can see the filter icon on the worksheet , turn it on to see the difference, every data point in the chart will act as filter
+
+dashboard interactive actions
+goto dashboard and click on actions
+there are three types of actions that can be added , filter action , highlight action and gotourl
+
+
+Then there is something called goto sheet icon (it will take you to the underlying worksheet)
+filteraction-menu function should be used to trigger filter action
+highlightaction-hover function should be used to trigger highlight action (just to highlight the result and dim down the rest)
+urlaction -select function should be used to trigger url action
+we said leave filter, it will show the filtered data
+for story we can create on book icon- list of all worksheets and dashboards just like in powerpint, arraniging slides in a sequence
+
+Donut charts
+it is a combination of pie chart and circle plot, create a pie and on top of it put a circle
+we need dual axis( 2 entries on row or column)
+create one calculated field (constant for example)(constant here is with value 0)
+put 2 constant onthe canvas shelf
+go to marks card of first constant shelf( bring region to color shelf and look at profit)
+bring profit onto size shelf
+go to marks card and change the chart type to pie
+go to second marks card and change the chart type to circle, also change the color to white
+then simply goto row shelf and select constant pill and say dual axis 
+if you want to magnify the image ctrl+shift+B
+
+Animation charts- use world indicators database
+put life expectancy male on rows
+put helath exp/capita on columns 
+darg region onto color shelf and put year in pages
+it will give u slider , you can slide up and down your data or use animation or play controls
+
+funnel chart (top is known as head and bototm is known as neck part)
+connect to sample super store
+bring sales on to rows field
+bring segment into colors part
+use sales onto size shelf
+
+advance funnel chart
+connect to sample superstore
+based on ship mode and sum of sales
+drop ship mode onto columns and drop sales onto rows
+you have to take the transpose of the bar chart and then you have to convert the chart type into area chart and sort it by descending order
+in case if you want to complete your other half , you have to create a calculated field with negative sales adn then drop it before sales on column shelf
+to add information , you can simply drag sales onto your label shelf

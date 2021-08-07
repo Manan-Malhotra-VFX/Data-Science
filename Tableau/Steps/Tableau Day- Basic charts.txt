@@ -1,0 +1,69 @@
+Basic Charts
+Text Tables- Put measure values in color shelf and then change the text type to square type(this will help us conver text table to highlight tabel). then create different legends for each measure and adjust the color as per preference.This feature was introduced in version 10.2
+Create legends for each measure.
+1) you plot profit against subcategory( subcatgory in rowshelf and profit in column shelf), then go to show me panel and select text table
+2)then simply drag my sales measure onto the canvas, profit ratio , numberof records, discount
+3)drag measure values onto color shelf, change my text type in marks card to square type
+4)then right click on measure values and create different legends for each measure and adjust color as per choice
+
+Highlight Table vs Text Table
+Highlight table -you can use only 1 measure( profit)
+Text Table- you can use more than 1 measure(profit, sales, number of records, profit ratio)
+Whenver we want to make use of 1 measure , please use highlight table 
+if there are more than 1 measure, then we can use text table
+1)you plot profit against subcategory( subcategory is in row shelf and profit in column shelf)
+2)By default tableau will show me a bar graph , then go to show me panel and select highlight table
+3) you can add a new dimension called date to see the profit is varying over time
+
+Bar charts- categorical comoparison, quick comparative analysis, most popular graph
+go to mark shelf, labels , turn on labels, always show labels 
+1) plot profit vs subcategory(profit will be row shelf , subcategory in column shelf)
+2)tableau will autoamtically display bar graph, you can freely change the color by going to marks card
+3)you can click on show mark lables to see all the values for profit
+4) if you want to highlight any particular value, you can do this by right clicking on the specific bar , got to mark labels , check always show
+
+stacked bar-if i want to understand the mode of shipment for differet subcategories , i can make use of stacked bar chart
+difficult to read when margin difference is ver very less
+within year i want to achieve which category is better
+1) plot profit vs order date (profit will be row shelf and order date will be in column shelf)
+2) i want to check for profits across different categories, simply drop category dimension onto color shelf
+3)you can clikc on show mark labels to know what profit is being contributed by different categories
+4)if you also want to show sales , we can drop sales on the marks card
+
+Side by side chart(connect to sample superstore dataset)
+1)plot profit vs category ,then you also bring  orderdate 
+2) then you go to show me panel and then  you click on side by side chart, tableau will display it automatically
+3)you dont want the color on your date, remove date form color shelf , add your catgeory to color shelf
+4)you can rearrange your fields like date should brought before you category
+5) you can simply add text lables to understand the profits for different categories over time 
+Date hierarchies are automatically created by Tbaleau
+
+
+Line Graphs-Discrete line chart , Continuous line chart
+difference between discrete line chart and continuous line chart is color (discrete is blue in color , continuous is green in color)
+by default it is discrete line chart, Year is blue in color -discrete, year is green in color -continuous
+dicrete chart- will give consolidated view, continuous line chart will give a more detailed view
+1) plot profit vs order date 
+2)go to show me panel and select discrete line graph 
+3) alternatively you can select continuos line graph
+4) without going to show me panel , i can simply right clik on my order date and look at 2 date shelfs( first shelf will tell us about discrete , 2nd shelf will tell us about continuous)
+5)you can simply click on add lable to understand the profit values with respect to each year 
+6) you can also drill down to quarter level and month level based on our requirement
+
+Dual axis- dual lines and dual combination
+Dual axis line chart- 
+1)plot profit vs order date
+2 )drag sales next to profit onto row shelf
+3)create dual axis by right clicking on sales , then go down to dual axis
+4) synchronize the axis  by clicking on right y axis(left y axis should be similar to right y axis)
+5) you can add text to know profit and sales values over time
+
+Dual axis combination chart
+1)plot profit vs order date 
+2)drag sales next to profit onto row shelf
+3) create dual axis by right clicking on sales , then go down and select dual axis
+4) synchronize the axis by clicking on right y axis (left y axis should be similar to right y axis)
+5) i can go ahead and change my sales graph to a bar chart
+6) add text lables to your line graph and bar graph for clarity
+
+

@@ -1,0 +1,48 @@
+Arbitary formatting- manual go to quick filter and change colors
+Drawback -this gets applied to all the charts wherever you apply order date 
+
+Conditional formatting or data spotlighting
+Use calculated fields 
+if sum(sales) >600k say it is very good sales 
+ex2: coffee chain
+drag product type and product on row shelf (check how data is distributed)
+then drag sales and product on column shelf
+CASE [product type]
+
+Ex3:
+connected to global superstore dataset
+there are different markets in global superstore, how they are faring with respect to sales, can they match the target ?whcih countries performing well or under performing
+drag markets onto row shelf to understand
+well establieshe markets: asia pacific , europe and usaca
+emerging markets-africa and latam
+
+ATTR is attribute function, general purpose it will return * if it has more than 1 value, it will return expression if it has 1 value or unique value
+ATTR is aggregation for non numeric data or dimensions, tableau will not mix disaggregate and aggregate functions
+so wrap it in your ATTR, 
+
+ATTR Function
+1)bring city and state to row shelf, observe apple valley is present in 2 states
+2)change STATE to attribute to see the * and then drag and drop your ATTR state on your filter and select *
+
+
+calculated fields
+sales across different years,all the calculations will be at level of detail
+look at diff in sales,if you see a triangle , it is a quick table calculations, direction is important
+by default all calcluations happen table across, you can also select table down or a comnbination
+then you can also select pane across , pane down and combination
+pane is nothing but my year(2015, 2016, 2017 , 2018)
+we can also calculte for other measures such as % of total sales etc.
+
+Drag your sales and sub category on canvas
+goto show me panel and select text table, add order date onto canvas
+then put 4 to 5 sales on marks card
+then click on measure values and add to sheet
+then create quick table calculation and drag and drop from marks card to measure to measure value shelf
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+Pie chart- part to whole analysis(connect to sample superstore)
+1)select profit and region (put profit on row shelf and region on column shelf)
+2)go to show me panel and then click on pie chart
+3)adjust the pie chart to fit the entire screen(entire view)
+4)drag profits onto my lable shelf,drag regions onto my lable shelf
+5)i want to see % values for profits, i will put profit in my marks card
+6)create a calculated field on profits by right clicking and selecting from quick table calculation
+7)select % of total from quick table calculation
+8)drag the calculated profit field onto my label shelf
+9)remove the profit text field from the marks card
+
+Heat maps -only 2 measures (we can control the size and color)
+1) select profit and sub category , then go to show me panel and select heat maps
+2)then if we want to see the profits for sub category over time, add date to my column shelf
+3)then add sales to my color shelf
+4)my objective is to control size with respect to sales and control profit with respect to color
+5)darg profit field in marks card to color shelf
+6)then bring sales field onto my size shelf in marks card 
+this will ensure that my sales is being controlled by size and profits are being controlled by color
+
+just quick relative comparison , you can use heat maps
+size is denoting sales, color is denoting profit
+
+Tree maps- come in handy when we want to represent alot of data points in a hierarchial fashion
+2 measures (one for size and one for color)
+we can contro size of rectangle and color of recgtangle with help of 2 measures
+how many rectangles will be controlled by dimensions
+you can add and subtract rectangles by adding country,state and city
+1)select profit and sub category 
+2) go to show me panel and then click on tree maps
+3)i am getting negative values in my dataset , so i will solve this problem by putting profit field in color shelf of my marks card
+4)then i bring my sales field on to my size shelf of marks card
+5)i will bring country dimension onto my label shelf of marks card
+6) i will bring my sate and city onto my label shelf of marks card
+
+we cannot have a rectangle with negative area, that is why tableau is showing 3 missing values -negative profits
+
+Area chart - we have discrete and continuous 
+when do we go for area chart , when we want a line chart as well as the break up
+it is basically a combination of a line chart and satcked bar chart
+total profit is sumof all parts
+1) select profit and category , this will not help me , why because i need atleast one date mesaure to draw my area chart,drag date measure onto my column shelf
+2)go to show me panel and then clik on area chart
+3)add text to your area chart for better understanding
+
+
+circle view, dot plot - alternative to bar chart
+dot plot 
+1) i will select profit and sub category and then go to my show me panel , selct bar graph by default
+2) go to your marks card and select circle to get your dot plot
+Circle plot or circle view
+1) i will selct profit and sub category and then go to my show me panel and select bar graph by default
+2) go to your marks card and select shape to get your circle view or circle plot
+
+
+sorting- from axis and pane
+if you have multiple measures, tableau will consider the first measure to sort the values
+tool bar is anyways there
+For example you can take sales and subcategory
+1) tool bar sorting (use tool bar on top)
+2) sorting from axis (use x axis to sort subcategories)
+3) sorting from color panel(We have added category to column shelf and then place category on color shelf). then use color panel to sort categories
+4) sorting from field ( i can select sales here). You can right click on your subcatgeory and select sort by field. then you can select sales in descending or ascending order.
+5) sort from your y axis. you can simply drag and drop from the axis.
+sorting can be done by second measure also , you can simply goto your subcategory , right click on it and select sort by field and select profit .
+all we have to do is selct that measure , go to my tool bar and select sort by ascending or descending 
+
+Filtering- Dimension
+1)General- manual filtering
+2)Wildcard- setup string conditions (end with s paper and storage are gone-exclude option)
+3)Condition- based on some measure value (profit >0) or profit<0
+4)Top -we can use this option to select top 5 or 10 customers
+
+Filtering -Dates
+1) Years- You can filter by number of years
+2) you can filter by number of quarters
+3) you can filter by range of dates
+4) you can filter by start date and end date
+5) you can filter by refrence dates
+
+select sub category vs profit ans then add region on column shelf
+then filter based on customer names starting with A
+
+measure filters-range of dates
+
+
+

@@ -1,0 +1,135 @@
+Filter -Measures, hierarchial
+Measure filter is very similar to your date filter
+Measure filter means - dropping a measure on the filter shelf. select based on data aggregation(sum is our aggregation here)
+1)Drag profit on row shelf
+2)Drag month(continuous)on column shelf( my capsule of profit should be in green color , this means it is continuous data type)
+You can decide the filter based on range of values , atleast value , atmost value, special (ignore null value- check non null values)
+
+Hierarchial filter also called as cascading filters - came up in 2018.1 version
+either first create hierarchy(this feature introduced in 2018.1) or select only relevant values
+Tableau public also has hierarchial filter, so please try at home
+Examples of hierarchies (location & product)
+product-category and sub category
+1)Give end user the control
+2)this is only possible when there is a parent child relationship
+Steps to hierarchial Filter (after 2018.1 version)
+1)I have to create a product hierarchy( category and sub category)
+2)Drag profit onto my canvas
+3)Drag category and sub category on my canvas
+4)you put category and subcategory on filter shelf
+5)you right click on both category and sub category and select show filter
+6)for better visualization , we drag category to the top of sub category card on the right side
+
+Steps to create my hierarchial filter(before 2018.1 version)
+1) drag profit onto my canvas
+2)drag catgeory and sub category on my canvas
+3)you put category and sub category on filter shelf and select show filter
+4)for better visualisation , we drag category to top of sub category card 
+5)from the sub category card , select only relevant values
+
+Grouping- Groups from marks or groups from headers
+Groups can be created for dimensions and measures
+Group from marks
+Marks-Datapoints
+Directly from the canvas , from bar graph you can select a group by selecting the hairclip icon 
+they are strictly static (if suppose in my next quarter , my fasteners will go into negative profits from less profits, then manually i will have to edit my group and drag fasteners from less profits to losses)
+Group from headers (select from axis , one consolidated value will be displayed)
+when you want to bring similar members in one group (for example profit<0)
+it will  not disturb rest of the members
+
+Sets it is similar to a filter
+top 5 customers example
+concept of set is similar to venn diagrams
+window for set is similar to filter , except wildcard will be missing
+will show members by default present in the  advantage over filters is that , we can see members within the set and also outside the set
+set is dynamic (let us say there is change in database, it will automatically change for top7 customers), this is where it is different from groups
+once you create a set , you can reuse it in a different worksheet
+1) Create a set , instead of a filter 
+2) find out top 10 customers from my list, so create a set on my customer name
+3)drag the set created by you onto the filter shelf
+4)select both in and out categories from your set to see the concept of set
+5)if you want to improve visualization of the chart , please add your set to the color shelf on marks card
+
+Create bottom 10 list
+1) drag profit on my canvas
+2)drag customer name onto my canvas
+3)create a set on customer name , i want to see bottom 10 customers
+4)drag your bottom set on to my filter shelf
+5)right click on my bottom 10 set and select show me in and out 
+6)for better visualisation add bottom 7 set to your color shelf
+
+question : can i show both my top 10 customers and bottom 10 customers on the same chart?
+1) with the above created sets(top 10 and bottom 10) drag them onto your filter shelf
+2) i wont be able to see any visualization on my canvas?
+As both are unique filters , we wont be able to see any visualization on my canvas
+this is where we use the concept of combined sets will come , our job is to combine both top 10 and bottom 10
+top 10=A
+bottom 10=B
+we do AUB (A union B)
+How do i do a combination set
+1) I first create my top 10 customer set
+2) I then create my bottom 10 customer set
+3) i then have to create a combined set ( i want to include both my top 10 customers and bottom 10 customers in my canvas)
+4) i will select AUB to combine both my sets 
+5)then i darg the combined set onto my filter shelf
+6)For better visualization add profit onto your color shelf
+
+
+Take example of scatter plot
+1)take shipping cost vs profit
+give order id on detail shelf of marks card
+then my questions is i want to show order only whose discount is > 10%
+also i want to see only orders with negative profits (profit<0)
+we want to see orders with positive profits and discount>10%
+A={1,2,3,4}
+B={2,3}
+AUB={1,2,3,4}
+AintersectionB={2,3}
+A-B={1,4}(Values which are present in only A and not B)
+B-A={}(values in present in B and not in A)
+
+Parameters- they are dynamic values which can replace constants with the variable or user input
+Parameters can be used from filter shelf
+they can be used with reference lines
+they can be used in calculated fields
+parametrs can be used with sets
+same question : we have to look at top 5 customers, we are hard coding the value of 5 when your using the filter on customer name
+we want to give end user flexibility
+
+Drag profit on to your canvas and then put your customer name on column shelf
+you create a parameter by putting your customer name in filter shelf
+Then go to top tab in your filter and select from field create new parameter
+Give a suitable name to your parameter for clarity
+1) we can select all values
+2) we can select list of values(show it as single value list) 
+3) we can select range of values( but make sure you select slider for quick filter on the right hand slide for clarity)
+specific position options are not there, like 30 35 etc
+
+Parametr control
+1)We can control 2 sheets with the help of using a common parameter across 2 sheets(that is if i make changes to 1 sheet , the other sheet gets automatically controlled)
+2)If we want to maintain independence between sheets, please use two different paramters for 2 different sheets
+
+Bump chart
+It is a line chart where the rank changes based on time line
+connect to global superstore
+rank of markets will change with time (for example sales across these markets with time)
+steps
+put order date onto column shelf
+sales onto row field
+Market into colors shelf
+right click on sales and select quick table calculation and rank and then select compute using market
+then change sales type to dicrete and change chart type in marks card to line
+
+Butterfly chart
+connect to coffe chain dataset
+put state on rows
+put profit and budget profit onto columns
+click on axis of profit and selct reverse
+create calculated field with name zeroaxisand enter value 0
+drop this zeroaxis between profit and budget profit
+click on zeroaxis pil and bring state onto text field
+change the chart type to text
+lets hide state headers, and drag your profit on color shelf and budget profit onto color shelf
+
+
+

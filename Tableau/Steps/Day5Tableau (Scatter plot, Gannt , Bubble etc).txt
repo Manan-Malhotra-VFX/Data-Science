@@ -1,0 +1,105 @@
+
+
+Reference lines
+1) simply go to axis and click on add reference line, this will help us draw a line
+Reference lines, bands, distribution can be used based on the business logic, they are usely used for benchmarking
+
+Forecasting-Predicting futre trends, estimating future trends given the past (Historic) Data
+Time series
+use historic data -2015, 2016, 2017, 2018
+connect to sample store for this exercise
+Ex: Business was established 4 years ago , what will be my profit in 2019 of superstore , given historic data
+You can predict sales, profit, 
+1) create time series chart or line chart (x axis shoudld be time)
+by default it is exponential smoothing- more importance is given to 2018 and least weightage is given to 2015
+EX : profit(2019)= 0.8*profit(2018)+ 0.6*profit(2017)+...(tableau will take care of the weights)
+You can ignore the last month or inlcude it based on business logic
+confidence interval (we cannot be 100% perfect) so we go for 95% confidence level( there is 95% chance)
+
+Scatter plot - Correlation analysis
+1)It will comment on the direction of relationship
+2)strength of the relationship
+Linear trend line- equation of straight line(y=mx+c), y here is profit(it should always be on y axis)
+x here is sales (it should always be on x axis )y= f(x), profit= f(sales), Rsquare 0.22, it is not a great model, i converted my model from linear to power , R square improved to 0.78
+c is y intercept
+p value <0.05 is allowed, confidence level is 95%
+
+what will be output when given input is provided
+Ex: what will be theweight gained given calories consumed
+Ex: what will be the profit given sales is 100k
+wind speed vs power output
+
+Gantt chart -list of events against a timeline
+connect to build a house dataset
+1) bring category on my row shelf
+2) bring my start date on column shelf
+3)then right click on date and arrange it as per exact value
+4) i have to put my duration on my size shelf
+5) then i can color my chart based on category
+6) i have to goto my category and arrange the order based on field (start date ) and select minimum value
+Tableau will give us a gannt chart 
+
+Histogram
+use coffee chain data
+Objective: to perform distributive analysis
+1 measure is enough( sales is enough or profit is enough)
+Drag sales onto row shelf.Tableau will create by default sales bin with specificsize( 34.3)
+if we want to manually change the bin size then , go to sales measure and click on create bin(with size 60)
+drag this newly created bin onto my canvas ,Then if we want to convert the resultant figure into histogram , increase bar size or change sales bin to discrete data type
+bins can be created only on measures
+
+Box and whisker plot- distribution analysis on data
+use sample superstore
+divide data into 4 quartiles
+Business Problem: discount being offered across different regions and segments
+5 point chart(min value , max value, median, q1 and q3)
+q1 is known as lower hinge(lower quartile)
+q3 is known as upper hinge(upper quartile)
+from minimum to upper hinge 75 percentile of data is concentrated
+from minimum to lower hinge 25 percentile of data is concentrated
+box will contain 50% of data distribution- it is nothing but peak in the data( middle 50% of data )
+any outliers will be outside of box and whiskers
+lenght of whiskers -data within 1.5times the interquartile range
+interquartile range(iqr) =q3-q1
+length of upper whisker= q3+1.5*iqr (>=this value will be an outlier)
+length of lower lower whisker= q1-1.5*iqr
+
+
+Bullet graph- strictly 2 measures (select profit vs budgeted profit)
+1)connect to your coffee chain database
+2)Drag profit and budget profit onto canvas and select bullett graph
+3)Blue bar is my budget profit (258,760), actual profit will be my reference line (259,543)
+4) Overall result is - Actual profit > budget profit(this is good result), If i dig deeper and do a market analysis , i can say that my southern region the worst performing region and my east region was very good.
+5)60% of target , 80% of target can also be seen in my bullett graph for reference
+
+
+Bubble chart- control size and color
+negative profit cannot be represented with negative area
+there use profit on color shelf, and sales on size as sales cannot be negative
+number of bubbles will be determined by sub categorie elements
+1) Drag profit onto row shelf
+2) Drag subcategory onto column shelf
+3) Goto show me panle and select packed bubbles
+4)Drag your profit onto your color shelf 
+5)Drag your sales onto your size shelf
+
+
+Word Cloud
+Select State and Sales as dimension and measure 
+Goto show me panel and select tree map
+select text in place of automatic from marks shelf
+word cloud is ready
+
+Bar in bar chart
+put subcategory in columns and sales in row shelf
+drag profit and put it on canvas secondary y axis
+go to all and then select bar graph from marks shelf
+then reduce the size of profit pill and sort it based on profit or sales
+
+Rounded Bar chart
+Put subcategory on rows sales on columns
+create 0 field in column shelf
+put that 0 field on x axis, then select line chart from marks field
+put measure names on path
+then edit axis and set fixed at 0 
+goto label and select show mark labels and deselct end of line 

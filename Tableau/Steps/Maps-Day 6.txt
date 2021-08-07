@@ -1,0 +1,104 @@
+Maps
+Geographic field -will be identified with the help of a globe icon
+Geographic field could be country , state, city etc 
+
+if we want plot our geographic data, simply drag country , state city on my canvas
+
+Geographic Roles
+1)it is associated region , city , state etc, zip codes(for india postal codes were added in version 10, Airports came up in version 10 of tableau). 
+2)They are all recognized on the basis of latitudes and longitudes. they are stored in tableau repository in documents, we can create new geographic roles and also from existing ones , and also we can create new ones
+3)we can also convert a geographica role into non-geographic role , we can simply plot airports on a map if your dataset has airports
+4)also it recognizes area codes in USA (CBSA.MSA) -core based satistical area/ metropolitran statistical area
+ similary we have county , congressional district levels in USA
+
+*be careful of cities (memphis in egypt or memphis in Tenesse in USA), therefore provide parent information like which country, which state and then followed by which city , otherwise it will provide error called ambiguity
+
+Drag country onto shelf for tableau to understand which country you are talking about(when you drag the country , automatically latitude and ,longitude are placed respectively in column and row shelf)
+
+Symbol maps
+Tableau by default will create symbol maps
+Tableau using a dot wich is a filled in circle is called your symbol map
+we can contol both size and color that is 2 measures ( i can control size with help of sales and color with help of profits)
+Ex:You can make use of a pie chart if you want to know at catgeory level(furtniture, office supplies , technology)
+if you want to know also about profit , you can do it (combined maps)
+
+Combined maps
+1)drag country and state on the shelf
+2)increase the circle size 
+3)drag sales onto size shelf in marks card
+4)drag category onto color shelf in marks card, change the chart type to pie
+5)then if we want to creat a combine map to include profits , then drag latitude and put it on row shelf
+6)convert your graph on top by removing sales and adding profits to color shelf , after that replace the type of chart with filled map
+7)once you have the filled map , combine both the maps with the help of dual axis 
+
+Filled Maps
+1)simply go to show me panel and select filled maps or i can do the same thing from marks card
+2)Maximum we can show only 1 measure on filled map( that is because we can control only paramter which is color )
+3)Tableau doesnot give a filled map for city geographic level
+
+Editing unrecognized locations
+connect to global superstore
+If there is ambiguity , try to enter latitude and longitude
+Take care of spelling mistakes( Bengaluru, if you bangalore)
+
+Layers
+1)By default it will show country border ,state borders, lakes etc.
+2)If you wnat more layers , go to map options and select layers, then you are free to choose from the available layers
+3)Depending on the zoom level of map some layers will be active and inactive
+click on zoom level , max 16 levels of zoom you have 
+4)we can also add data layers, specific to  usa( population , per capita income)
+ex: population layer
+5)At any point in time ,we can show one data layer
+
+
+*These maps are coming form Openstreet map contributors
+
+WMS-Web map services
+1) drag country , state onto your canvas
+2) go to  background maps , then select  manage maps  , inside  manage maps  select the url 
+3)save it in the form export it -it will take you to tableau repository under map sources folder
+4)you can simply import it if you want to use it on any of your maps
+
+Polygon maps
+if the region is neither a country or city , a nonstandard region that you want to define for your requirement
+enclose it or shade that region or enclose it use polygon maps
+1)polygon maps cannot be created with generated values of latitude and longitude( that is fields present in internal tableau database)
+therefore, latitude and longitude should be present in your underlying database
+2)also name of th place shpould be present
+3)each place or region should have unique id
+4)how should i define the order depends on point order
+5)every dot in the map has a point order, point order tells tableau the sequence in which dots should be connected to give a meaningful structure
+Use National Parks UK polygon dataset
+Steps:
+1)Drag latitude and longitude
+2)Bring park name on detail shelf
+3)change mark type to polygon
+4)provide information such as polygon id on detail 
+5)provide point id on path shelf of marks card
+6)bring park name onto color shelf
+
+Custom coding
+Ex Region , i want to make it a geographic role
+create geographic role from states (this feature has come up in version 10)
+1)First, you have to make a hierarchy, let us call this hierarchy as location
+2)right click on region , go to create from states, then automatically you can see the globe icon next to region
+3)Drag country onto detail shelf followed by Region 
+4) Add state to detail shelf and color it with region 
+3)if you want you can add profit on label shelf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
