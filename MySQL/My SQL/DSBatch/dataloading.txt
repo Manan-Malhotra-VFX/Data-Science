@@ -1,0 +1,61 @@
+kx1. Load data from csv
+___________________________________________________
+
+load data local infile 'file.csv' into table table
+ fields terminated by ','
+ lines terminated by '\n'
+ (column1, column2, column3,...)
+
+ Example
+
+Create table universities (Univ varchar(20),
+   SAT integer,
+   Top10 integer,
+   Accept integer,
+   SFRatio integer,
+   Expenses integer ,
+   GradRate integer);
+
+
+
+load data infile '/Users/geethika/C/MysqlTraining/csvfiles/Universities.csv' 
+into table universities
+fields terminated by ','
+lines terminated by '\n'
+IGNORE 1 LINES;
+
+2. Write to csv / Excel file
+
+select 'Univ','SAT','Top10','Accept','SFRatio','Expenses','GradRate' 
+union
+SELECT 
+    * FROM
+    universities
+WHERE
+    gradrate > 90
+INTO OUTFILE '/Users/geethika/C/Personal/Univ_partial2.csv' 
+FIELDS TERMINATED BY ',' 
+LINES TERMINATED BY '\r\n';
+
+_____________________________________________________________________________
+
+Note: The following commands are to be exexuted from the command prompt and not the mysql prompt
+
+3. Dumping the entire database 
+
+mysqldump -u [username] –p[password] [database_name] > [dump_file.sql]
+
+mysqldump -u root -p exampledb > '/Users/geethika/C/Personal/examdb.sql'
+
+____________________________________________________________________________
+
+4. Loading into DB from the dump
+
+mysql -u [username] –p[password] [database_name] < [dump_file.sql]
+mysql -u root -p bkupdb < '/Users/geethika/C/Personal/exadb.sql'
+_____________________________________________________________________________
+
+5. Dumping specific files 
+
+mysqldump -u root -p exampledb authors books > '/Users/geethika/C/Personal/ba.sql'
+

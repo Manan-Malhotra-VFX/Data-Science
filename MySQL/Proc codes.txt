@@ -1,0 +1,71 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `myproc`(bid integer)
+BEGIN
+# declare x integer default 10;
+# select x as value;
+declare lcl_aid integer; #lcl =local variable
+declare lcl_title varchar(255);
+select title,authorid into lcl_title,lcl_aid from books where bookid=bid;
+select concat(lcl_title," written by author ",lcl_aid);
+# select * from books where bookid=bid;
+# select "Hello" as message;
+END
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_if`(num integer)
+BEGIN
+	if num > 0 then
+		select("Number is positive") as msg;
+    elseif num < 0 then 
+		select("Number is negative") as msg;
+    else
+		select("Number is Zero") as msg;
+	end if;
+	select("Outside if") as msg;
+END
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_repeat`(num integer)
+BEGIN
+declare cnt integer default 0; #can is count
+myloop:REPEAT
+	set cnt=cnt+1;
+	select concat("Hello",cnt) as greeting;
+# Termination condition
+	until cnt=num
+end REPEAT myloop;
+select ("outside loop") as msg;
+END
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_simple_loop`(num integer)
+BEGIN
+declare cnt integer default 0; #can is count
+myloop:LOOP
+	set cnt=cnt+1;
+	select concat("Hello",cnt) as greeting;
+# Termination condition
+	if cnt=num then
+		leave myloop;
+	end if;
+end LOOP myloop;
+select ("outside loop") as msg;
+END
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `proc_while`(num integer)
+BEGIN
+declare cnt integer default 0; #can is count
+	# Continuation condition
+myloop:WHILE cnt < num DO
+	set cnt=cnt+1;
+	select concat("Hello",cnt) as greeting;
+	
+end WHILE myloop;
+select ("outside loop") as msg;
+END
+
+
+
