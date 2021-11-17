@@ -6,3 +6,4 @@ nltk==3.6.3
 regex==2021.10.23
 pip==21.3.1
 streamlit==1.2.0
+requests==2.26.0
