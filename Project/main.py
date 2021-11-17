@@ -1,17 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 16 21:46:16 2021
-
-@author: Admin
-"""
-# get_ipython().system('pip install PyPDF2')
-python3.7 -m venv ~/.streamlit_ve
-source ~/.streamlit_ve/bin/activate
-pip install -U pip
-pip install PyPDF2
-
-
-
 import streamlit as st
 import PyPDF2
 import re
