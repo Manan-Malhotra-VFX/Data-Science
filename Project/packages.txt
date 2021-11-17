@@ -4,4 +4,4 @@ afinn
 pandas
 sklearn
 nltk
-re
+regex
