@@ -1,0 +1,8 @@
+
+TF-IDF info link
+
+https://towardsdatascience.com/text-summarization-using-tf-idf-e64a0644ace3
+
+
+other links for evaluation techniques
+https://www.upgrad.com/blog/text-summarization-in-nlp/#Evaluation_techniques
