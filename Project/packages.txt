@@ -4,6 +4,3 @@ pandas-dev
 sklearn-dev
 nltk-dev
 regex-dev
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
