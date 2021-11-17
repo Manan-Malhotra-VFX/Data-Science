@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 import PyPDF2
 import re
 
