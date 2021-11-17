@@ -2,13 +2,14 @@ import streamlit as st
 import requests
 import PyPDF2
 import re
-import requests
+# import requests
 
 import pandas as pd
 from afinn import Afinn
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk import PorterStemmer
+import nltk
 nltk.download('punkt')
 
 
