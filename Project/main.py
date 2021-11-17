@@ -5,6 +5,7 @@ import re
 import pandas as pd
 from afinn import Afinn
 from sklearn.feature_extraction.text import TfidfVectorizer
+from nltk import tokenize
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk import PorterStemmer
 
