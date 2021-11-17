@@ -1,6 +1,6 @@
-PyPDF2
-afinn
-pandas
-sklearn
-nltk
-regex
+PyPDF2-dev
+afinn-dev
+pandas-dev
+sklearn-dev
+nltk-dev
+regex-dev
