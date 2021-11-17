@@ -4,7 +4,8 @@ Created on Tue Nov 16 21:46:16 2021
 
 @author: Admin
 """
-get_ipython().system('pip install PyPDF2')
+# get_ipython().system('pip install PyPDF2')
+!pip install PyPDF2
 
 import streamlit as st
 import PyPDF2
